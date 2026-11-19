@@ -1,0 +1,300 @@
+/* Lewis Ngo — clean academic homepage. Edit theme colors here. */
+:root,
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --background: #121416;
+  --text: #e2e5e8;
+  --heading: #f2f3f5;
+  --muted: #a0a6ae;
+  --link: #b4cff2;
+  --link-hover: #d9e7ff;
+  --line: #33383d;
+  --icon-hover: #20262b;
+  --focus: #accbf5;
+}
+html[data-theme="light"] {
+  color-scheme: light;
+  --background: #fafaf9;
+  --text: #282c31;
+  --heading: #171b1f;
+  --muted: #626a73;
+  --link: #245b93;
+  --link-hover: #143e69;
+  --line: #dedfdf;
+  --icon-hover: #ebedee;
+  --focus: #245b93;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font: 16px/1.78 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color .2s ease, color .2s ease;
+}
+.container {
+  width: min(calc(100% - 42px), 700px);
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.site-header { padding-top: 56px; }
+.site-title {
+  margin: 0 0 8px;
+  font-size: 28px;
+  line-height: 1.3;
+  font-weight: 600;
+  letter-spacing: -.035em;
+}
+.site-title a { color: var(--heading); text-decoration: none; }
+.site-title a:hover { color: var(--heading); }
+.header-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+.site-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 19px; font-size: 15px; }
+.site-nav a { color: var(--muted); text-decoration: none; }
+.site-nav a:hover,
+.site-nav a[aria-current="page"] { color: var(--link); text-decoration: underline; text-underline-offset: 4px; }
+.header-actions { display: flex; gap: 8px; align-items: center; flex-shrink: 0; }
+.icon-action {
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 0;
+  border-radius: 6px;
+  color: var(--muted);
+  text-decoration: none;
+  cursor: pointer;
+  padding: 5px;
+}
+.icon-action:hover { background: var(--icon-hover); color: var(--heading); }
+.icon-action svg { width: 19px; height: 19px; stroke: currentColor; stroke-width: 1.75; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+html[data-theme="dark"] .moon-icon,
+html[data-theme="light"] .sun-icon { display: none; }
+main { flex: 1; padding-top: 42px; padding-bottom: 55px; }
+main h1 { margin: 0 0 25px; font-size: 22px; font-weight: 600; color: var(--heading); letter-spacing: -.02em; }
+main h2 { margin: 32px 0 8px; font-size: 17px; font-weight: 600; color: var(--heading); }
+p { margin: 0 0 18px; }
+a { color: var(--link); text-decoration: underline; text-underline-offset: 3px; }
+a:hover { color: var(--link-hover); }
+small, .secondary { color: var(--muted); }
+.about-body::after { content: ""; display: block; clear: both; }
+.profile-photo {
+  width: 170px;
+  max-width: 40%;
+  height: auto;
+  float: right;
+  margin: 0 0 20px 25px;
+  border-radius: 9px;
+}
+ul { padding-left: 22px; margin: 10px 0 24px; }
+li { padding-left: 2px; margin: 0 0 9px; }
+.back { display: inline-block; margin-top: 25px; font-size: 14px; }
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding: 20px 0 36px;
+  font-size: 13px;
+  color: var(--muted);
+}
+.skip-link { position: absolute; left: -9999px; top: 8px; background: var(--background); padding: 8px; }
+.skip-link:focus { left: 10px; z-index: 10; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; }
+@media (max-width: 600px) {
+  body { font-size: 15.5px; line-height: 1.7; }
+  .site-header { padding-top: 34px; }
+  .site-title { font-size: 26px; }
+  main { padding-top: 33px; }
+  .site-nav { gap: 8px 14px; font-size: 14px; }
+  .header-actions { gap: 2px; }
+  .icon-action { width: 30px; height: 30px; }
+  .profile-photo { width: 150px; max-width: 100%; float: none; display: block; margin: 0 0 22px; }
+}
+@media (max-width: 420px) {
+  .header-bottom { align-items: flex-start; }
+  .site-nav { max-width: 240px; }
+
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  body { transition: none; }
+}
+
+
+/* Research page: subtle, accessible collapsible abstract. */
+.thesis-title { margin-bottom: 5px; }
+.thesis-status { margin: 0 0 18px; font-size: 14px; color: var(--muted); }
+.thesis-abstract { margin: 0 0 30px; }
+.thesis-abstract summary {
+  display: list-item;
+  list-style-position: inside;
+  width: fit-content;
+  cursor: pointer;
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-size: 15px;
+}
+.thesis-abstract summary:hover { color: var(--link-hover); }
+.thesis-abstract summary::marker { color: var(--muted); }
+.thesis-abstract summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; }
+.thesis-abstract .abstract-open-label { display: none; }
+.thesis-abstract[open] .abstract-open-label { display: inline; }
+.thesis-abstract[open] .abstract-closed-label { display: none; }
+.abstract-content { padding-top: 19px; }
+.abstract-content p:last-child { margin-bottom: 0; }
+
+
+/* Teaching and seminar entries */
+.teaching-entry {
+  display: grid;
+  grid-template-columns: 115px minmax(0, 1fr);
+  column-gap: 16px;
+  align-items: start;
+  margin-bottom: 18px;
+}
+
+.teaching-term {
+  color: var(--muted);
+}
+
+.teaching-entry strong {
+  display: block;
+  font-weight: 600;
+}
+
+.teaching-entry > div:last-child > div {
+  margin-top: 3px;
+}
+
+/* Spacing between sections */
+main h1:not(:first-child) {
+  margin-top: 38px;
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+  .teaching-entry {
+    grid-template-columns: 1fr;
+    row-gap: 3px;
+    margin-bottom: 20px;
+  }
+}
+
+/* Compact thesis layout */
+main .thesis-status {
+  margin-bottom: 7px;
+}
+
+main .thesis-abstract {
+  margin: 0;
+}
+
+main .thesis-abstract + h2 {
+  margin-top: 30px;
+}
+
+
+/* More compact teaching entries */
+.teaching-entry {
+  margin-bottom: 10px;
+}
+
+.teaching-entry strong {
+  line-height: 1.4;
+}
+
+.teaching-entry > div:last-child > div {
+  margin-top: 2px;
+}
+
+.teaching-entry:last-child {
+  margin-bottom: 0;
+}
+
+
+/* Notes */
+.notes-list {
+  list-style: none;
+  counter-reset: note;
+  padding: 0;
+  margin: 0;
+}
+
+.note-entry {
+  counter-increment: note;
+  position: relative;
+  padding: 0 0 18px 32px;
+  margin: 0 0 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.note-entry:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.note-entry::before {
+  content: counter(note, decimal-leading-zero) ".";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.note-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 4px 16px;
+}
+
+.note-title {
+  font-weight: 600;
+  color: var(--heading);
+  text-decoration: none;
+}
+
+.note-title:hover {
+  color: var(--link);
+  text-decoration: underline;
+}
+
+.note-pdf {
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.note-description {
+  margin: 6px 0 4px;
+}
+
+.note-meta {
+  margin: 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+@media (max-width: 600px) {
+  .note-entry {
+    padding-left: 28px;
+  }
+}
+
+.note-date {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--muted);
+  margin-left: 8px;
+}
+

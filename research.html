@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#121416">
+  <meta name="description" content="Academic homepage of Lewis Ngo, mathematics at the University of Bonn.">
+  <title>Research — Lewis Ngo</title>
+  <!-- Select the saved theme before rendering, to avoid a flash. Defaults to dark. -->
+  <script>try { document.documentElement.dataset.theme = localStorage.getItem('site-theme') === 'light' ? 'light' : 'dark'; } catch (e) {}</script>
+  <link rel="stylesheet" href="styles.css">
+  <script src="theme.js" defer></script>
+  <!-- Render the LaTeX notation in the thesis abstract. -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']]
+      }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="container">
+    <header class="site-header">
+      <div class="site-title"><a href="index.html">Lewis Ngo</a></div>
+      <div class="header-bottom">
+        <nav class="site-nav" aria-label="Main navigation">
+          <a href="index.html">about</a>
+          <a href="research.html" aria-current="page">research</a>
+          <a href="notes.html">notes</a>
+          <a href="teaching.html">teaching & seminars</a>
+        </nav>
+        <div class="header-actions">
+          <!-- Replace the placeholder email address on every page. -->
+          <a class="icon-action" href="mailto:s18lngo@uni-bonn.de" aria-label="Email Lewis Ngo" title="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+          <button class="icon-action" type="button" id="theme-toggle" aria-label="Switch to light mode" title="Switch to light mode"><svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg><svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.3A8.5 8.5 0 0 1 9.7 3.5 8.5 8.5 0 1 0 20.5 14.3Z"/></svg></button>
+        </div>
+      </div>
+    </header>
+    <main id="main">
+      <h1>Research</h1>
+      <h2>Master's thesis</h2>
+      <p class="thesis-title"><strong>Chromatic Splittings of Classifying Spaces</strong></p>
+      <p class="thesis-status">Manuscript in preparation</p>
+
+      <details class="thesis-abstract" id="master-abstract">
+        <summary>
+          <span class="abstract-closed-label">Show abstract</span>
+          <span class="abstract-open-label">Hide abstract</span>
+        </summary>
+        <div class="abstract-content">
+          <p>
+            We give a complete classification of \(K(1)\)-local stable splittings
+            of classifying spaces of finite groups at all primes, using their
+            representation theory and ambidexterity of the \(K(1)\)-local
+            category. At odd primes, the problem admits a completely algebraic
+            description in terms of \(p\)-adic \(K\)-theory. All indecomposable
+            building blocks arise from cyclic \(p\)-groups, with multiplicities
+            governed by the permutation character of the power-map action on
+            conjugacy classes of elements of \(p\)-power order. At the prime
+            \(2\), rational representation theory yields additional dihedral,
+            semidihedral, and generalized quaternion families, whose
+            multiplicities are recovered from the actions of the Adams operations
+            on \(K(1)^0(\mathrm{B}G)\) and \(\mathrm{KO}_2^3(\mathrm{B}G)\). We further determine the tensor
+            products and homotopy groups of these summands, and extend the
+            classification to \(E(1)\)-localization using the chromatic fracture
+            square. Beyond height one, we obtain results on the \(K(n)\)-local
+            splitting problem for classifying spaces of all cyclic \(p\)-groups
+            at higher chromatic heights, using the action by the Morava
+            stabilizer group.
+          </p>
+          <p>
+            Going forward, we plan to explore whether the prime-two
+            classification admits a more conceptual description through united
+            \(K\)-theory and investigate connections with classical integral
+            stable splittings. In particular, we are interested in using the
+            arithmetic fracture square to relate the height-one splittings to
+            the categorical fixed points of the genuine \(\mathrm{KU}_G\)-local sphere.
+            More broadly, we would like to explore such questions in the
+            framework of global homotopy theory, investigate \(K(n)\)-local
+            splittings of iterated classifying spaces \(\mathrm{B}^nG\) of finite abelian
+            \(p\)-groups in connection with the higher cyclotomic Galois
+            extensions of Carmeli-Schlank-Yanovski, and understand which
+            features of the height-one picture persist at higher chromatic
+            heights through HKR character theory.
+          </p>
+        </div>
+      </details>
+
+      <h2>Bachelor's thesis</h2>
+      <p class="thesis-title"><strong>Operadic Right Kan Extensions</strong></p>
+      <p class="thesis-status">Manuscript available upon request</p>
+
+      <details class="thesis-abstract" id="bachelor-abstract">
+        <summary>
+          <span class="abstract-closed-label">Show abstract</span>
+          <span class="abstract-open-label">Hide abstract</span>
+        </summary>
+        <div class="abstract-content">
+          <p>
+           We study colored operads over a symmetric monoidal ground category, together with modules and algebras over operads. We investigate restriction functors between categories of operadic algebras induced by morphisms of operads. We present a necessary and sufficient condition for such a restriction functor to admit a right adjoint. This condition is expressed in terms of a factorization property, requiring operations in the codomain operad to decompose essentially uniquely into operations of arity one, followed by operations in the domain operad. As an application, we show that the forgetful functor from cyclic operads to operads admits a right adjoint.
+          </p>
+        </div>
+      </details>
+
+
+    </main>
+    <footer class="site-footer">© 2026 Lewis Ngo</footer>
+  </div>
+</body>
+</html>
