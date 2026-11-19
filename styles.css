@@ -298,3 +298,67 @@ main .thesis-abstract + h2 {
   margin-left: 8px;
 }
 
+/* Profile photo on mobile */
+@media (max-width: 600px) {
+  .profile-photo {
+    float: none;
+    display: block;
+    width: 135px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 24px;
+    border-radius: 8px;
+  }
+}
+
+
+/* Minimal expandable abstracts */
+.thesis-abstract summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+  cursor: pointer;
+  color: var(--link);
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.thesis-abstract summary::-webkit-details-marker {
+  display: none;
+}
+
+.thesis-abstract summary:hover {
+  color: var(--link-hover);
+}
+
+/* Small chevron */
+.thesis-abstract summary::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform 0.15s ease;
+}
+
+.thesis-abstract[open] summary::after {
+  transform: rotate(225deg);
+}
+
+/* Indented abstract with vertical line */
+.thesis-abstract .abstract-content {
+  margin-top: 14px;
+  padding: 2px 0 2px 16px;
+  border-left: 2px solid var(--line);
+}
+
+.thesis-abstract .abstract-content p {
+  margin-bottom: 14px;
+}
+
+.thesis-abstract .abstract-content p:last-child {
+  margin-bottom: 0;
+}
+
